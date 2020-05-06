@@ -38,6 +38,18 @@ module.exports = {
   ** Nuxt.js modules
   */
   modules: [
+    ['nuxt-bugsnag', {
+      config: {
+        apiKey: '70f338348e917a55ce4118596316cc7e',
+        disabled: false,
+        enabledReleaseStages: ['production'],
+        publishRelease: true,
+        config: {
+          environment: process.env.NODE_ENV,
+          appVersion: '1.0',
+        },
+      },
+    }]
   ],
   /*
   ** Build configuration
