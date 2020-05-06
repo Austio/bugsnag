@@ -2,23 +2,33 @@
 
 URL: https://app.bugsnag.com/testing-73/app2/errors
 
-> bugsnag
+Before either of these run `yarn install`
 
-## Build Setup
+### Development
+ - yarn run dev
+ 
+### Production Replication
+ - yarn run nuxt generate
+ - yarn run start
 
-```bash
-# install dependencies
-$ yarn install
+## Issue
 
-# serve with hot reload at localhost:3000
-$ yarn dev
 
-# build for production and launch server
-$ yarn build
-$ yarn start
+First lets prove bugsnag is setup.  start a server and issue this command
 
-# generate static project
-$ yarn generate
-```
+`$nuxt.$bugsnag.notify(new Error('this is a client error from console'))`
 
-For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
+
+### Bugsnag events that appear to not work
+
+#### Generate a live error that is not sent
+http://localhost:3000/error
+
+Click the "Throw an error" button
+
+#### Generate an error in a client page
+http://localhost:3000/error?error=true
+
+
+
+

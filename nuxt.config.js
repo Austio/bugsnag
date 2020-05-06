@@ -42,7 +42,7 @@ module.exports = {
       config: {
         apiKey: '70f338348e917a55ce4118596316cc7e',
         disabled: false,
-        enabledReleaseStages: ['production'],
+        enabledReleaseStages: ['production', 'development'],
         publishRelease: true,
         config: {
           environment: process.env.NODE_ENV,
